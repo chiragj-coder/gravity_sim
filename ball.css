@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ball {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url("ball.png");
+    background-size: 150px;
+    background-position-y: 132.5px;
+    background-position-x: center;
+  
+    animation: bounce 5s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.760, 0.110, 1.000, 0.970);
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes bounce {
+    from { transform: translate3d(0, 0, 0);     }
+    to   { transform: translate3d(0, 500px, 0); }
+  }
+  
+  /* Prefix Support */
+  ball {
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: cubic-bezier(0.760, 0.110, 1.000, 0.970);
+    -webkit-animation-iteration-count: infinite;
+  }
+  @-webkit-keyframes bounce {
+    from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200px, 0); }
+  }

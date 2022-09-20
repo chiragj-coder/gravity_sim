@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", serif;
+  overflow: hidden;
+}
+
+.canvas {
+  width: 300px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: bottom center;
+}
+
+.ruler {
+  margin-left: -50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 100%;
+  /* background:rgba(0,0,0,.5); */
+  border-radius: 3px;
+  overflow: hidden;
+  transform: rotate(180deg);
+  box-shadow:0 5px 15px rgba(0,0,0,.5);
+}
+
+.ruler:before {
+  /* background: linear-gradient(#141e30, #243b55); */
+  background: rgba(0,0,0,.5);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  /* filter:blur(20px); */
+  /* background-color: #d3b056; */
+}
+
+.ruler:after {
+  content: '';
+  position: absolute;
+  top:  575px;
+  left: 19px;
+  width: 12px;
+  height: 12px;
+  /* background-color: #e17074; */
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+ul li {
+  width: 14px;
+  margin-bottom: 3px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+ul li:nth-child(5n) {
+  width: 21px;
+}
+
+.ruler ul {
+  margin: 9px 0;
+}
+
+/* .sailor {
+  position: absolute;
+  top: 110px;
+  left: 45px;
+  width: 23px;
+  height: 0;
+  background: linear-gradient(#75b8d6 55%, #fff 55%, #fff 60%, #f3d5b7 60%);
+  border: 5px solid #e17074;
+  border-bottom-color: #fff;
+  border-top-width: 0;
+  overflow: hidden;
+  animation: 5s sailor infinite ease-in-out;
+}
+
+.sailor span {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  font-weight: bold;
+  transform: rotate(-90deg);
+} */
