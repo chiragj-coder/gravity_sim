@@ -1,3 +1,8 @@
+:root{
+  --black-light-brightness: rgba(0, 0, 0, 0.1);
+  --animation-timing-func-val: cubic-bezier(0.760, 0.110, 1.000, 0.970);
+  --bounce-time: 5s;
+}
 body {
     display: flex;
     justify-content: center;
@@ -7,16 +12,16 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: var(--black-light-brightness);
     background-image: url("ball.png");
     background-size: 150px;
     background-position-y: 132.5px;
     background-position-x: center;
   
-    animation: bounce 5s;
+    animation: bounce var(--bounce-time);
     animation-direction: alternate;
-    animation-timing-function: cubic-bezier(0.760, 0.110, 1.000, 0.970);
-    animation-iteration-count: infinite;
+    animation-timing-function: var(--animation-timing-func-val);
+    animation-iteration-count: 2;
   }
   
   @keyframes bounce {
@@ -27,10 +32,10 @@ body {
   /* Prefix Support */
   ball {
     -webkit-animation-name: bounce;
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: var(--bounce-time);
     -webkit-animation-direction: alternate;
-    -webkit-animation-timing-function: cubic-bezier(0.760, 0.110, 1.000, 0.970);
-    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: var(--animation-timing-func-val);
+    -webkit-animation-iteration-count: 2;
   }
   @-webkit-keyframes bounce {
     from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
