@@ -85,10 +85,13 @@ ul li:nth-child(6n+1) {
 }
 
 .rulernumbers p{
+  text-align: right;
+  width: 18px;
   color: #ffffff;
   /* text-align:right; */
   margin-block-end: -22.75px;
   padding: 0px;
+  /* margin-right: 200px; */
 }
 
 /* .sailor {
