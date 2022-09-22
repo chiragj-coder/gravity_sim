@@ -1,14 +1,14 @@
 :root{
   --black-light-brightness: rgba(0, 0, 0, 0.1);
   --animation-timing-func-val: cubic-bezier(0.760, 0.110, 1.000, 0.970);
-  --bounce-time: 5s;
+  --bounce-time: 1.5s;
 }
 body {
     display: flex;
     justify-content: center;
   }
   
-  .ball {
+#ball {
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -30,7 +30,7 @@ body {
   }
   
   /* Prefix Support */
-  ball {
+  /* ball {
     -webkit-animation-name: bounce;
     -webkit-animation-duration: var(--bounce-time);
     -webkit-animation-direction: alternate;
@@ -40,4 +40,4 @@ body {
   @-webkit-keyframes bounce {
     from { -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
     to   { -webkit-transform: translate3d(0, 200px, 0); transform: translate3d(0, 200px, 0); }
-  }
+  } */

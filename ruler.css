@@ -23,19 +23,20 @@ body {
 .ruler {
   margin-left: -50px;
   position: absolute;
-  top: 0;
+  top: -15px;
   left: 0;
   width: 45px;
-  height: 100%;
-  /* background:var(--black-medium-brightness); */
+  height: 105%;
   border-radius: 3px;
   overflow: hidden;
-  /* transform: rotate(180deg); */
   box-shadow:0 5px 15px var(--black-medium-brightness);
+  /* background:var(--black-medium-brightness); */
+  display: grid;
+  grid-column: auto;
 }
 
 .ruler:before {
-  /* background: linear-gradient(#141e30, #243b55); */
+  z-index: -1;
   background: var(--black-medium-brightness);
   content: '';
   position: absolute;
@@ -60,7 +61,6 @@ body {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
   position: absolute;
   right: 0;
 }
@@ -71,17 +71,24 @@ ul li {
   border-bottom: 2px solid var(--white);
 }
 
-ul li:nth-child(6n) {
-  width: 21px;
-  border-bottom: 2px solid var(--white);
-}
-ul li:nth-child(1) {
+ul li:nth-child(6n+1) {
   width: 21px;
   border-bottom: 2px solid var(--white);
 }
 
 .ruler ul {
   margin: 9px 0;
+}
+
+.rulernumbers{
+  justify-content: center;
+}
+
+.rulernumbers p{
+  color: #ffffff;
+  /* text-align:right; */
+  margin-block-end: -22.75px;
+  padding: 0px;
 }
 
 /* .sailor {

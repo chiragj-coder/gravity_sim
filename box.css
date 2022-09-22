@@ -172,3 +172,10 @@ body {
     bottom: 100%;
   }
 }
+
+#controls{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around
+}
